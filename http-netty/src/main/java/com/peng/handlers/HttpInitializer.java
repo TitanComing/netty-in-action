@@ -1,6 +1,5 @@
 package com.peng.handlers;
 
-import cn.hutool.core.io.BOMInputStream;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
@@ -60,7 +59,5 @@ public class HttpInitializer extends ChannelInitializer<Channel> {
             //增加自定义的处理器                             in
             channelPipeline.addLast("custHttpServerHandler",new CustomHttpServerHandler());
         }
-
-
     }
 }
